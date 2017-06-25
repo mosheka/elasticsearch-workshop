@@ -12,7 +12,9 @@ with open('crawl_data.csv', 'r') as csvfile:
 		j = 0;
 		for col in row:
 			print(str(j) + ':' + col)
-			if j == 13:
+			if j == 5:
+				print('Decoded: ' + str(base64.b64decode(row[5])))
+			elif j == 13:
 				print('Decoded: ' + str(base64.b64decode(row[13])))
 			elif j == 21:
 				print('Decoded: ' + str(base64.b64decode(row[21])))
